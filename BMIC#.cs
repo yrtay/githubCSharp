@@ -1,6 +1,12 @@
-﻿已開始建置...
-1>------ 已開始建置: 專案: BMI, 設定: Debug Any CPU ------
-1>略過分析器以加速組建。您可以執行「組建」或「重建」命令來執行分析器。
-1>BMI -> D:\C#\BMI\BMI\bin\Debug\net7.0\BMI.dll
-========== 組建: 1 成功，0 失敗，0 為最新狀態，0 已跳過 ==========
-========== 組建 開始於 2:24 PM 並使用了 02.215 秒 ==========
+﻿System.Console.WriteLine("歡迎測試你的BMI：\n");
+
+System.Console.WriteLine("請輸入你的體重：");
+double weight = System.Convert.ToDouble(System.Console.ReadLine());
+
+System.Console.WriteLine("請輸入你的身高：");
+double heightcm = System.Convert.ToDouble(System.Console.ReadLine());
+double heightm = heightcm / 100;
+
+double BMI = weight / (Math.Pow(heightm, 2));
+
+System.Console.WriteLine("你的BMI值為" + BMI);
